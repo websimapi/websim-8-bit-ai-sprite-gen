@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>8-Bit AI Sprite Gen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>AI 8-BIT FORGE</h1>
+        </header>
+
+        <div class="canvas-wrapper">
+            <!-- This canvas displays the final result scaled up -->
+            <canvas id="displayCanvas"></canvas>
+            
+            <!-- Loading Overlay -->
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <p id="statusText">INITIALIZING...</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="promptInput" placeholder="Describe your sprite (e.g., 'A fire wizard')" autocomplete="off">
+            </div>
+
+            <div class="options-row">
+                <div class="option">
+                    <label>Grid Size</label>
+                    <select id="sizeSelect">
+                        <option value="32">32x32</option>
+                        <option value="48">48x48</option>
+                        <option value="64" selected>64x64</option>
+                        <option value="128">128x128</option>
+                    </select>
+                </div>
+                <div class="option checkbox-wrapper">
+                    <label for="transparentToggle">Transparent</label>
+                    <input type="checkbox" id="transparentToggle" checked>
+                </div>
+            </div>
+
+            <div class="action-row">
+                <button id="generateBtn" class="btn primary">GENERATE</button>
+                <button id="downloadBtn" class="btn secondary" disabled>SAVE .PNG</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
